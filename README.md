@@ -1,6 +1,6 @@
 <h1> AccuWeatherWebUIAutotests </h1>
 <h3><b>Разработаны автотесты для сайта <a href="https://developer.accuweather.com/">Developer AccuWeather</a>:</b></h3><br>
-<h4><<li><i>для авторизации:</i></li></h4>
+<h4><li><i>для авторизации:</i></li></h4>
 <ul>
   <li>позитивные</li>
   <li>негативные</li>
