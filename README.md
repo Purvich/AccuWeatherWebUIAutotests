@@ -1,5 +1,5 @@
 # AccuWeatherWebUIAutotests
-Тесты:
+Разработаны автотесты для сайта https://developer.accuweather.com:
 1. для авторизации:
   - позитивные;
   - негативные.
