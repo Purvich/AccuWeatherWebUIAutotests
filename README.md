@@ -1,1 +1,1 @@
-# AccuWeatherWebUIAutotests-
+# AccuWeatherWebUIAutotests
