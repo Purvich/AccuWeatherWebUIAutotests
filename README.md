@@ -12,7 +12,7 @@
   <h6><li>Позитивные кейсы:</li></h6>
     <ul>
       <li>
-        <i><a href=""></a></i>
+        <i><a href="https://github.com/Purvich/AccuWeatherWebUIAutotests/blob/master/src/test/java/cucumber/authorization/positive/Success%20Authorization.feature">Успешная авторизация</a></i>
       </li>
     </ul>
   
