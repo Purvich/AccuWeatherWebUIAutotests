@@ -1,5 +1,5 @@
 <h1><b>Описание проекта</b> </h1>
-<h1> Автотесты для сайта <a href="https://developer.accuweather.com/">Developer AccuWeather</a>:</b> </h1>
+<h2>Автотесты для сайта <a href="https://developer.accuweather.com/">Developer AccuWeather</a>:</b></h2>
 <h4><i>1. Для авторизации:</i></h4>
 <ul>
   <li>позитивные</li>
