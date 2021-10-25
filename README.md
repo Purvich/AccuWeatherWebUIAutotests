@@ -1,5 +1,5 @@
 # AccuWeatherWebUIAutotests
-<b>Разработаны автотесты для сайта https://developer.accuweather.com/: </b><br>
+<b>Разработаны автотесты для сайта <a href="https://developer.accuweather.com/"> Developer AccuWeather </a>: </b><br>
 <i>1. для авторизации:</i>
   - позитивные;
   - негативные.<br>
