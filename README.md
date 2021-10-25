@@ -1,7 +1,7 @@
 # AccuWeatherWebUIAutotests
-<b>Разработаны автотесты для сайта <a href="https://developer.accuweather.com/"> Developer AccuWeather </a>: </b>
-<i>1. для авторизации:</i>
-  - позитивные;
+<b>Разработаны автотесты для сайта <a href="https://developer.accuweather.com/">Developer AccuWeather</a>:</b><br>
+<i>1. для авторизации:</i><br>
+  - позитивные;<br>
   - негативные.<br>
 <i>2. для создания нового приложения;</i><br>
 <i>3. для удаления существующего приложения.</i><br>
