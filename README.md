@@ -1,7 +1,7 @@
 # Автотесты для сайта <a href="https://developer.accuweather.com/">Developer AccuWeather</a>:
 
 ```diff
-- Тесты написаны с использованием chromedriver и работаю только при наличии браузера Google Chrome.
+- Тесты написаны с использованием chromedriver и работают только при наличии браузера Google Chrome.
 ```
 
 <h6><b>Тест-кейсы можно посмотреть <i><a href="https://docs.google.com/spreadsheets/d/19OGLU2VpDEI8ScSmPuKU6Esxt392eqM6eLdnv9mRHrI/edit?usp=sharing">тут.</a></i><b></h6>
