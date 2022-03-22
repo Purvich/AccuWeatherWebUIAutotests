@@ -75,7 +75,7 @@
   <p><li><a href="https://github.com/Purvich/AccuWeatherWebUIAutotests/blob/master/src/test/java/selenide/authorizationTests/NegativeAuthorizationTest.java">Негативные кейсы:</a></li></p>
     <p><ul>
       <li>
-        <i>Авторизация с пустым полем "Username or e-mail address"</i>
+        <i><a href="https://github.com/Purvich/AccuWeatherWebUIAutotests/blob/master/src/test/java/selenide/authorizationTests/NegativeAuthorizationTest.java#:~:text=NegativeAuthorizationTest%20extends%20BaseTest%20%7B-,%40Test,%7D,-%40Test">Авторизация с пустым полем "Username or e-mail address"</a></i>
       </li>
       <li>
         <i>Авторизация с пустым полем "Password"</i>
