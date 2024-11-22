@@ -1,4 +1,4 @@
-# Автотесты для сайта <a href="https://developer.accuweather.com/">Developer AccuWeather</a>:
+# Automated Tests for the website <a href="https://developer.accuweather.com/">Developer AccuWeather</a>:
 
 ```diff
 - The tests are written using chromedriver and only work if the Google Chrome browser is installed.
