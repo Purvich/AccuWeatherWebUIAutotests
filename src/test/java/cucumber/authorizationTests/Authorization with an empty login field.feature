@@ -5,7 +5,6 @@ Feature: Authorization with an empty login field
 
     Scenario:
       When Click on the login button to open the authorization window
-      And Click on Password field
       And Fill input Password
       And Click on button "Login"
       Then Authorization error check

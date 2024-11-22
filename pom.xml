@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project xmlns="http://maven.apache.org/POM/4.0.0"
-         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>org.example</groupId>
@@ -20,7 +20,6 @@
         <logback-classic.version>1.2.5</logback-classic.version>
         <okhttp.version>4.9.1</okhttp.version>
         <selenium-java.version>3.141.59</selenium-java.version>
-        <webdrivermanager.version>4.4.3</webdrivermanager.version>
         <allure-junit5.version>2.14.0</allure-junit5.version>
         <cucumber.version>6.11.0</cucumber.version>
         <selenide.version>5.24.2</selenide.version>
@@ -70,11 +69,6 @@
             <groupId>org.seleniumhq.selenium</groupId>
             <artifactId>selenium-java</artifactId>
             <version>${selenium-java.version}</version>
-        </dependency>
-        <dependency>
-            <groupId>io.github.bonigarcia</groupId>
-            <artifactId>webdrivermanager</artifactId>
-            <version>${webdrivermanager.version}</version>
         </dependency>
         <dependency>
             <groupId>io.qameta.allure</groupId>

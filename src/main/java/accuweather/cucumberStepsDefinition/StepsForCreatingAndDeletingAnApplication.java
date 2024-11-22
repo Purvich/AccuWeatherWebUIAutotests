@@ -1,80 +1,91 @@
 package accuweather.cucumberStepsDefinition;
 
 import accuweather.data.ApplicationData;
-import accuweather.pages.AddApplicationPage;
-import accuweather.pages.MainPage;
-import accuweather.pages.MyApplicationsPage;
-import io.cucumber.java.en.*;
+import accuweather.data.BaseData;
+import accuweather.data.LoginModalDialogElements;
+import accuweather.data.LoginPageButtons;
+import accuweather.data.LoginPageData;
+import accuweather.pages.addApplicationPage.AddApplicationPage;
+import accuweather.pages.loginPage.ModalLoginPage;
+import accuweather.pages.loginPage.NavigationBarPage;
+import accuweather.pages.myApplicationPage.MyApplicationsPage;
+import accuweather.pages.myApplicationPage.MyApplicationsPageAsserts;
+import accuweather.utils.WebUtils;
+import io.cucumber.java.en.And;
+import io.cucumber.java.en.Given;
+import io.cucumber.java.en.Then;
+import io.cucumber.java.en.When;
 
 public class StepsForCreatingAndDeletingAnApplication {
 
-    @Given("Authorization")
-    public void authorization() {
-        new MainPage()
-                .openSite()
-                .authorization();
-    }
+  private final NavigationBarPage navigationBarPage = new NavigationBarPage();
+  private final ModalLoginPage modalLoginPage = new ModalLoginPage();
+  private final MyApplicationsPage myApplicationsPage = new MyApplicationsPage();
+  private final MyApplicationsPageAsserts myApplicationPageAsserts = new MyApplicationsPageAsserts();
+  private final AddApplicationPage addApplicationPage = new AddApplicationPage();
 
-    @When("Click on button 'MY APPS' on navigation menu")
-    public void goToMyApplicationsPage() {
-        new MainPage().goToMyApplicationsPage();
-    }
+  @Given("Authorization")
+  public void authorization() {
+    WebUtils.openUrl(BaseData.BASE_URL);
+    navigationBarPage.clickOnTheButtonInNavigationBar(LoginPageButtons.LOGIN_BUTTON);
+    modalLoginPage
+        .fillInputInLoginModalDialog(LoginModalDialogElements.USERNAME_INPUT, LoginPageData.CORRECT_LOGIN)
+        .fillInputInLoginModalDialog(LoginModalDialogElements.PASSWORD_INPUT, LoginPageData.CORRECT_PASSWORD)
+        .clickOnTheButtonInLoginModalDialog(LoginModalDialogElements.LOG_IN_BUTTON);
+  }
 
-    /**
-     * Для создания приложения
-     */
+  @When("Click on button 'MY APPS' on navigation menu")
+  public void goToMyApplicationsPage() {
+    modalLoginPage.clickOnMyAppsOnNavigationMenu();
+  }
 
-    @And("Click on button '+Add a new App'")
-    public void goToAddApplicationPage() {
-        new MyApplicationsPage().goToAddApplicationPage();
-    }
+  @And("Click on button '+Add a new App'")
+  public void goToAddApplicationPage() {
+    myApplicationsPage.goToAddApplicationPage();
+  }
 
-    @And("Fill Application name")
-    public void fillApplicationName() {
-        new AddApplicationPage().fillNameApplication(ApplicationData.APPLICATION_NAME);
-    }
+  @And("Fill Application name")
+  public void fillApplicationName() {
+    addApplicationPage.fillNameApplication(ApplicationData.APPLICATION_NAME);
+  }
 
-    @And("Select where the API will be used")
-    public void selectWhereTheApiWillBeUsed() {
-        new AddApplicationPage().selectAttributeWhereApisUsed(ApplicationData.ATTRIBUTE);
-    }
+  @And("Select where the API will be used")
+  public void selectWhereTheApiWillBeUsed() {
+    addApplicationPage.selectAttributeWhereApisUsed(ApplicationData.ATTRIBUTE);
+  }
 
-    @And("Select what to build with this API")
-    public void selectCheckBoxPartnerApp() {
-        new AddApplicationPage().selectCheckBoxPartnerApp();
-    }
+  @And("Select what to build with this API")
+  public void selectCheckBoxPartnerApp() {
+    addApplicationPage.selectCheckBoxPartnerApp();
+  }
 
-    @And("Click on button 'Create App'")
-    public void clickOnButtonCreateApp() {
-        new AddApplicationPage().clickOnCreateApp();
-    }
+  @And("Click on button 'Create App'")
+  public void clickOnButtonCreateApp() {
+    addApplicationPage.clickOnCreateApp();
+  }
 
-    @Then("Success message 'App created!' is visible")
-    public void successMessageAppCreatedIsVisible() {
-        new MyApplicationsPage().verificationOfSuccessfulApplicationCreation();
-    }
+  @Then("Success message 'App created!' is visible")
+  public void successMessageAppCreatedIsVisible() {
+    myApplicationPageAsserts.verificationOfSuccessfulApplicationCreation();
+  }
 
-    /**
-     * Для удаления
-     */
+  @And("Select Application")
+  public void selectApplicationForDeleting() {
+    myApplicationsPage.clickOnMyApplication();
+  }
 
-    @And("Select Application")
-    public void selectApplicationForDeleting() {
-        new MyApplicationsPage().clickOnMyApplication();
-    }
+  @And("Click on the 'Delete' button in the menu that open")
+  public void clickDeleteApplication() {
+    myApplicationsPage.clickOnButtonDeleteApplication();
+  }
 
-    @And("Click on the 'Delete' button in the menu that open")
-    public void clickDeleteApplication() {
-        new MyApplicationsPage().clickOnButtonDeleteApplication();
-    }
+  @And("Confirm the deletion by clicking on the delete button")
+  public void confirmDeleteApplication() {
+    myApplicationsPage.confirmDeleteApplication();
+  }
 
-    @And("Confirm the deletion by clicking on the delete button")
-    public void confirmDeleteApplication() {
-        new MyApplicationsPage().confirmDeleteApplication();
-    }
-
-    @Then("Make sure the app is uninstalled")
-    public void successDeleteApplication() {
-        new MyApplicationsPage().verificationOfSuccessfulApplicationDeleting();
-    }
+  @Then("Make sure the app is uninstalled")
+  public void successDeleteApplication() {
+    myApplicationPageAsserts.verificationOfSuccessfulApplicationDeleting();
+  }
 }
