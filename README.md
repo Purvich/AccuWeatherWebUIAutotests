@@ -72,7 +72,7 @@
       </li>
       </ul></p>
   
-  <p><li><a href="https://github.com/Purvich/AccuWeatherWebUIAutotests/blob/master/src/test/java/selenide/authorizationTests/NegativeAuthorizationTest.java">Negative cases:</a></li></p>
+  <p><li><a href="https://github.com/Purvich/AccuWeatherWebUIAutotests/blob/master/src/test/java/selenide/authorizationTests/NegativeAuthorizationTests.java">Negative cases:</a></li></p>
     <p><ul>
       <li>
         <i>Authorization with an empty "Username or e-mail address" field"</i>
